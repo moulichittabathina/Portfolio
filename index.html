@@ -1,345 +1,771 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Responsive Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Times New Roman', serif;
-            line-height: 1.6;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - iPortfolio Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-        /* Header Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 10px;
-            list-style: none;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        nav ul li {
-            margin: 0 15px;
-        }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-        }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        /* Header */
-        header {
-            background-color: #333;
-            padding: 20px;
-            margin-top: 60px; /* Account for fixed nav */
-            color: #fff;
-            text-align: center;
-        }
-
-        /* Sections */
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Responsive Grid for Projects */
-        #project-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .work-item {
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        .image {
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .image img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        /* Additional Projects Section */
-        #additional-projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Responsive Navigation */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-        }
-    </style>
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#one">About</a></li>
-            <li><a href="#two">Projects</a></li>
-        </ul>
+
+<body class="index-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/Image15.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1 class="sitename">Mouli Chittabathina</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="https://www.instagram.com/moulichowdary110" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/mouli-chittabathina" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://wa.me/15715646067" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+      <a href="mailto:moulichittabathina@gmail.com" class="email" target="_blank"><i class="bi bi-envelope"></i></a>
+      <a href="https://github.com/moulichittabathina" class="github" target="_blank"><i class="bi bi-github"></i></a>
+    </div>
+    
+    
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Projects</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
     </nav>
 
-    <!-- Header -->
-    <header id="header">
-        <div class="inner">
-            <div style="width: 256px; height: 256px; overflow: hidden; border-radius: 50%; margin: 0 auto;">
-                <img src="images/Formal2.jpg" alt="Profile Picture" style="width: 100%; height: 100%; object-fit: cover;" />
-            </div>
-            <h1>MOULI CHITTABATHINA</h1>
-            <p>An Aspiring Data Analyst skilled in SQL, R, Python, Tableau, and PowerBI</p>
-        </div>
-    </header>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background" style="border-radius: 10px; overflow: hidden;">
+
+  <img  src="assets/img/Image9.JPG" alt="Mouli Chittabathina" data-aos="fade-in" class="img-fluid" style="border-radius: 10px;">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100" >
+      <h2 style="color: rgb(13, 33, 70);" style="white-space: pre;">M o u l i <br>C h i t t a b a t h i n a</h2>
+      <p style="color: rgb(0, 0, 0);">
+          <i>I'm an <br><span class="typed" data-typed-items="Aspiring Data Analyst, Machine Learning Enthusiast, Power BI Expert, SQL Developer">
+              Aspiring Data Analyst</i>
+          </span>
+          <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+      </p>
+  </div>
+
+</section><!-- /Hero Section -->
 
 
 
+    <!-- About Section -->
+<section id="about" class="about section" style="background: #f4f7fc; padding: 60px 0;">
 
-  
+  <!-- About Section Title -->
+  <div class="container section-title text-center" data-aos="fade-up">
+    <h2 style="font-family: 'Roboto Slab', serif; font-weight: bold; font-size: 2rem; color: #2c3e50;">About</h2>
+    <p style="font-size: 1.2rem; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+      A seasoned Data Analyst with nearly 4 years of expertise in data analytics, predictive modeling, and interactive visualization tools. Skilled in developing scalable data pipelines and crafting meaningful narratives using Python, SQL, and tools like Power BI and Tableau. Experienced across diverse industries, delivering actionable insights that drive strategic decisions and operational efficiency.
+    </p>
+  </div><!-- End About Section -->
 
-		<!-- Main -->
-			<div id="main">
 
-				<!-- One -->
-				<section id="one">
-					<header class="major">
-					  <h2 style="font-weight: bold; text-align: center; font-family: 'Times New Roman', serif; font-size: 25px; color: #000000;">MOULI CHITTABATHINA's PORTFOLIO</h2>
-					</header>
-					<ul style="text-align: justify; font-family: 'Times New Roman', serif; color: #404040;">
-						<li>Highly skilled Data Analytics Engineer with a Master's in Data Analytics Engineering from George Mason University and a Bachelor's in Electronics and Communication Engineering from Malaviya National Institute of Technology</i>.</li>
-						<li>Experience at DMI Finance Private Limited involved automating historical data processes in Salesforce, providing technical leadership, and developing efficient batch monitoring systems.</li>
-						<li>Proficient in SQL, Python, and R for various projects, including COVID-19 disparities analysis, customer churn prediction, and auto insurance analysis.</li>
-						<li>Adept at leveraging frameworks such as Pandas, Scikit-learn, Nltk, and tools like Excel, Tableau, Power Bi, MySQL, Grafana, PostgreSQL, Oracle DB, Cassandra, and Talend.</li>
-						<li>Expertise in Salesforce automation, project leadership, strategic decision-making, and optimizing system performance.</li>
-						<li>Passionate about contributing innovative solutions to data-centric projects, with a proven track record of enhancing company profitability through technology-driven initiatives.</li>
-					  </ul>					  
-					  <ul class="actions">
-						<li><a href="https://drive.google.com/file/d/1djg1uMeqySJK-udIlFqAswrd6nddG3ZY/view?usp=drive_link" class="button" style="border: 2px solid #4CAF50; color: #4CAF50; font-family: 'Times New Roman', serif; font-weight: bold;">View Resume</a></li>
-						<li><a href="https://github.com/moulichittabathina" class="button" style="border: 2px solid #3399FF; color: #3399FF; font-family: 'Times New Roman', serif; font-weight: bold;">View Github</a></li>
-					  </ul>					  
-				  </section>
-				  
-				  
-  
-  
-  
-  
-<!-- Two -->
 
-<section id="two">
-  <h2 style="font-weight: bold; text-align: justify; font-family: 'Times New Roman', serif; font-size: 25px; color: #000000;">PROJECTS</h2>
-  <div class="row" id="project-container">
+ <!-- About Section -->
+<section id="about" class="about section" style="background-color: #f4fcfc; padding: 40px 0;">
 
-    <!-- Project 1 -->
-    <article class="col-6 col-12-xsmall work-item">
-      <a href="https://github.com/moulichittabathina/COVID-19-Disparities-across-US-Counties" target="_blank">
-        <div class="image fit thumb">
-          <img src="images/Covid_19.jpg" alt="" style="height: 200px;" />
-        </div>
-      </a>
-      <h3 style="font-weight: bold; text-align: justify; font-family: 'Times New Roman', serif; font-size: 18px; color: #000000;">Analysis of COVID-19 Disparities</h3>
-      <p style="text-align: justify; font-family: 'Times New Roman', serif; font-size: 15px; color: #404040; font-style: italic;">Examined racial, ethnic, and age variations in COVID-19 incidence and vaccination rates across US counties. Utilized SQL, Python, and R for data cleaning and statistical analysis.</p>
-    </article>
+  <!-- Container for About Section -->
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4 justify-content-center" style="padding: 5px; border-radius: 10px; background-color: #f4fcfc; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);">
+    
+      <!-- Profile Image -->
+<div class="col-lg-4" style="padding: 0;">
+  <div class="profile-border" style="border: 3px solid #3498db; border-radius: 20px; padding: 5px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+    <img src="assets/img/Image19.JPG" class="img-fluid rounded" alt="Mouli Chittabathina"
+         style="border-radius: 15px; height: 350px; width: 3500px; object-fit: cover;">
+  </div>
+</div>
 
-    <!-- Project 2 -->
-    <article class="col-6 col-12-xsmall work-item">
-      <a href="https://github.com/moulichittabathina/Credit-Card-Data-Analysis" target="_blank">
-        <div class="image fit thumb">
-          <img src="images/Customer_Churn.jpg" alt="" style="height: 200px;" />
-        </div>
-      </a>
-      <h3 style="font-weight: bold; text-align: justify; font-family: 'Times New Roman', serif; font-size: 18px; color: #000000;">Customer Churn Prediction</h3>
-      <p style="text-align: justify; font-family: 'Times New Roman', serif; font-size: 15px; color: #404040; font-style: italic;">Analyzed U.S. bank dataset to predict customer churn in credit card accounts. Implemented machine learning models (Logistic Regression, Random Forest, Decision Tree) through hyperparameter tuning.</p>
-    </article>
 
-    <!-- Project 3 -->
-    <article class="col-6 col-12-xsmall work-item">
-      <a href="https://github.com/moulichittabathina/Auto-Claims-Data-Analysis" target="_blank">
-        <div class="image fit thumb">
-          <img src="images/Insurance.jpg" alt="" style="height: 200px;" />
-        </div>
-      </a>
-      <h3 style="font-weight: bold; text-align: justify; font-family: 'Times New Roman', serif; font-size: 18px; color: #000000;">Auto Insurance Analysis</h3>
-      <p style="text-align: justify; font-family: 'Times New Roman', serif; font-size: 15px; color: #404040; font-style: italic;">Conducted exploratory analysis on auto insurance claims, revealing insights into customer values, state variations, and profitability. Provided actionable recommendations for pricing and policies.</p>
-    </article>
+      <!-- About Content -->
+      <div class="col-lg-8 content">
+        <h2 style="font-family: 'Roboto Slab', serif; font-weight: bold; color: #2c3e50; margin-bottom: 15px; line-height: 1.2; border-bottom: 2px solid #e74c3c; padding-bottom: 2px;">
+          Data Analyst &amp ML Enthusiast
+        </h2>
+        <p class="fst-italic" style="font-size: 1rem; color: #34495e; font-family: 'Roboto', sans-serif; line-height: 1.5;">
+          Passionate about empowering businesses through data-driven strategies, I leverage analytics and machine learning to solve complex challenges and uncover growth opportunities.
+        </p>
 
-    <!-- Project 4 -->
-    <article class="col-6 col-12-xsmall work-item">
-      <a href="https://github.com/moulichittabathina/Indian-Premier-League-Analysis" target="_blank">
-        <div class="image fit thumb">
-          <img src="images/cricket.jpg" alt="" style="height: 200px;" />
-        </div>
-      </a>
-      <h3 style="font-weight: bold; text-align: justify; font-family: 'Times New Roman', serif; font-size: 18px; color: #000000;">IPL Team Performance Analysis</h3>
-      <p style="text-align: justify; font-family: 'Times New Roman', serif; font-size: 15px; color: #404040; font-style: italic;">Analyzed IPL team dynamics, emphasizing home advantage and debunking coin toss myths. Utilized R Studio for data cleaning, manipulation, and insightful visualizations.</p>
-    </article>
-
-    <!-- View All Projects Button -->
-    <ul class="actions">
-		<li><a href="#" class="button" id="view-all-projects" style="font-weight: bold;  font-family: 'Times New Roman', serif; color: #000000; border: 2px solid #000000;">View All Projects</a></li>
-	  </ul>
-	  
-
-    <!-- Additional Projects (Initially Hidden) -->
-    <div id="additional-projects" style="display: none;">
-      <!-- Additional Projects -->
-      <!-- Project 5 -->
-      <article class="col-6 col-12-xsmall work-item additional-project">
-        <a href="https://github.com/moulichittabathina/Analysis-Of-Global-Power-Plant" target="_blank">
-          <div class="image fit thumb">
-            <img src="images/Powerplant.jpg" alt="" style="height: 200px;" />
-          </div>
-        </a>
-        <h3 style="font-weight: bold; text-align: justify; font-family: 'Times New Roman', serif; font-size: 18px; color: #000000;">Analysis of Global Powerplant</h3>
-        <p style="text-align: justify; font-family: 'Times New Roman', serif; font-size: 15px; color: #404040; font-style: italic;">The Global Power Plant Database conducts analysis on power plant data, focusing on countries with the highest total capacity, the correlation between capacity and factors such as location, fuel type, and generation. Using a linear regression model, the project made predictions on capacity and power output. The project aimed to provide insights into the distribution of power plants worldwide and the prevalent fuel types used.</p>
-      </article>
-
-      <!-- Project 6 -->
-      <article class="col-6 col-12-xsmall work-item additional-project">
-        <div class="image fit thumb" style="pointer-events: none;">
-          <img src="images/Salesforce_backup.png" alt="" style="height: 200px;" />
-        </div>
-        <h3 style="font-weight: bold; text-align: justify; font-family: 'Times New Roman', serif; font-size: 18px; color: #000000;">Automated Historical Data Purging and Storage in Salesforce</h3>
-        <p style="text-align: justify; font-family: 'Times New Roman', serif; font-size: 15px; color: #404040; font-style: italic;">Implemented Talend-based automation to purge and transform historical data from Salesforce custom objects. Stored the transformed data in Salesforce Big Object, utilizing Talend and SOQL for efficient retrieval. Improved data management, optimized system performance, and reduced storage costs.</p>
-      </article>
-
-      <!-- Project 7 -->
-      <article class="col-6 col-12-xsmall work-item additional-project">
-        <div class="image fit thumb" style="pointer-events: none;">
-          <img src="images/Salesforce_batch.jpg" alt="" style="height: 200px;" />
-        </div>
-        <h3 style="font-weight: bold; text-align: justify; font-family: 'Times New Roman', serif; font-size: 18px; color: #000000;">Automated Batch Monitoring in Salesforce</h3>
-        <p style="text-align: justify; font-family: 'Times New Roman', serif; font-size: 15px; color: #404040; font-style: italic;">Built an automated batch monitoring system in Salesforce using SOQL queries and Apex coding. Tracked scheduled batches daily, weekly, and monthly, ensuring successful job completion. Designed and implemented the monitoring system, automated processes, handled errors, and provided proactive visibility for troubleshooting.</p>
-      </article>
-
-      <!-- Project 8 -->
-      <article class="col-6 col-12-xsmall work-item additional-project">
-        <!-- Add your content for Project 8 -->
-      </article>
-    </div>
-
-      <!-- View Fewer Projects Button -->
-<ul class="actions">
-	<li><a href="#" class="button" id="view-fewer-projects" style="display: none; color: #000000; border: 2px solid #000000;">View Fewer Projects</a></li>
+        <div class="row" style="margin-left: 0; margin-right: 0;">
+          <!-- First Column -->
+          <!-- First Column -->
+<div class="col-md-6" style="padding-left: 0; padding-right: 0;">
+  <ul style="color: #34495e; font-size: 0.9rem; line-height: 1; padding-left: 0; margin-bottom: 0;">
+    <li><i class="fas fa-arrow-right" style="color: #3498db;"></i> <strong>City:</strong> <span>Fairfax, VA</span></li>
+    <li><i class="fas fa-arrow-right" style="color: #3498db;"></i> <strong>Email:</strong> <span><a href="mailto:moulichittabathina@gmail.com" style="color: #3498db;">moulichittabathina@gmail.com</a></span></li>
+    <li><i class="fas fa-arrow-right" style="color: #3498db;"></i> <strong>Phone:</strong> <span>+1 571-564-6067</span></li>
+    <li><i class="fas fa-arrow-right" style="color: #3498db;"></i> <strong>Website:</strong> <span><a href="https://moulichittabathina.github.io" target="_blank" style="color: #3498db;">moulichittabathina.github.io</a></span></li>
   </ul>
-  
-  
+</div>
+
+<!-- Second Column -->
+<div class="col-md-6" style="padding-left: 0; padding-right: 0;">
+  <ul style="color: #34495e; font-size: 0.9rem; line-height: 1; padding-left: 0; margin-bottom: 0;">
+    <li><i class="fas fa-arrow-right" style="color: #3498db;"></i> <strong>Age:</strong> <span>27</span></li>
+    <li><i class="fas fa-arrow-right" style="color: #3498db;"></i> <strong>Degree:</strong> <span>Masters in Data Analytics Engineering</span></li>
+    <li><i class="fas fa-arrow-right" style="color: #3498db;"></i> <strong>LinkedIn:</strong> <span><a href="https://linkedin.com/in/mouli-chittabathina" target="_blank" style="color: #3498db;">linkedin.com/in/mouli-chittabathina</a></span></li>
+    <li><i class="fas fa-arrow-right" style="color: #3498db;"></i> <strong>GitHub:</strong> <span><a href="https://github.com/moulichittabathina" target="_blank" style="color: #3498db;">github.com/moulichittabathina</a></span></li>
+  </ul>
+</div>
+
+        </div>
+
+        <p style="font-size: 1rem; color: #0a0f0f; line-height: 1.6;">
+          <b><strong style="font-size: 1.3rem; color: #072e53;">Core Skills:</strong><br> Python, SQL, Power BI, Tableau, Machine Learning, Data Pipeline Optimization, and Predictive Analytics. Focused on delivering interactive dashboards and insights that transform raw data into impactful business solutions.</b>
+        </p>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <script>
-    // JavaScript to toggle visibility of additional projects
-    document.getElementById('view-all-projects').addEventListener('click', function () {
-      document.getElementById('additional-projects').style.display = 'grid';
-      this.style.display = 'none';
-      document.getElementById('view-fewer-projects').style.display = 'inline-block';
-    });
+</section><!-- /About Section -->
 
-    // JavaScript to toggle visibility of fewer projects
-    document.getElementById('view-fewer-projects').addEventListener('click', function () {
-      document.getElementById('additional-projects').style.display = 'none';
-      document.getElementById('view-all-projects').style.display = 'inline-block';
-      this.style.display = 'none';
-    });
-  </script>
 
-  
 
-				<!-- Three -->
-<section id="three" style="text-align: center; background-color: #f8f8f8; padding: 60px 0;">
-  <h2 style="font-weight: bold; font-family: 'Times New Roman', serif; font-size: 30px; color: #333;">Get In Touch</h2>
-  <p style="font-size: 16px; color: #555;">Feel free to reach out to me for any inquiries or collaboration opportunities. I look forward to connecting with you!</p>
-  <div class="row" style="margin: 40px auto; max-width: 600px; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);">
-    <div class="col-12">
-      <ul class="labeled-icons">
-        <li style="margin-bottom: 20px;">
-          <h3 class="icon solid fa-home" style="font-size: 24px; color: #4CAF50;"><span class="label" style="font-size: 18px; color: #333;">Address</span></h3>
-          <p style="font-size: 16px; color: #555;">11610 Fairfax Meadows Cir, Apt 18003<br />Fairfax, Virginia VA, 22030-8376<br />United States</p>
-        </li>
-        <li style="margin-bottom: 20px;">
-          <h3 class="icon solid fa-mobile-alt" style="font-size: 24px; color: #3399FF;"><span class="label" style="font-size: 18px; color: #333;">Phone</span></h3>
-          <p style="font-size: 16px; color: #555;">+1 (571) 564-6067</p>
-        </li>
-        <li>
-          <h3 class="icon solid fa-envelope" style="font-size: 24px; color: #ff6600;"><span class="label" style="font-size: 18px; color: #333;">Email</span></h3>
-          <p style="font-size: 16px; color: #555;"><a href="mailto:mchittab@gmu.edu" style="color: #333; text-decoration: none;">mchittab@gmu.edu</a></p>
-        </li>
-      </ul>
+    
+
+ <!-- Stats Section -->
+<section id="stats" class="stats section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <!-- Stats Item 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item" style="border: 3px solid #3498db; border-radius: 10px; padding: 20px;">
+          <i class="bi bi-bar-chart-line" style="color: #e74c3c;"></i>
+          <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Dashboards Built</strong></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item" style="border: 3px solid #3498db; border-radius: 15px; padding: 20px; text-align: left;">
+          <i class="bi bi-database" style="color: #e74c3c;"></i>
+          <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>DB Optimization</strong></p>
+        </div>
+      </div><!-- End Stats Item -->
+      
+
+      <!-- Stats Item 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item" style="border: 3px solid #3498db; border-radius: 10px; padding: 20px;">
+          <i class="bi bi-clock-history" style="color: #e74c3c;"></i>
+          <span data-purecounter-start="0" data-purecounter-end="4000" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Hours of Analysis</strong></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+      <!-- Stats Item 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item" style="border: 3px solid #3498db; border-radius: 10px; padding: 20px;">
+          <i class="bi bi-person" style="color: #e74c3c;"></i>
+          <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Years of Experience</strong></p>
+        </div>
+      </div><!-- End Stats Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Stats Section -->
+
+
+
+
+ <!-- Skills Section -->
+<section id="skills" class="skills section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title text-center" data-aos="fade-up">
+      <h2 style="font-family: 'Roboto Slab', serif; font-weight: bold; font-size: 2rem; color: #2c3e50;">Skills</h2>
+      <p style="font-size: 1.2rem; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto;">A diverse skill set spanning programming, data visualization, and advanced analytics tools.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="skills-border" style="border: 3px solid #e74c3c; padding: 20px; border-radius: 10px;">
+          <div class="row skills-content skills-animation">
+
+              <!-- Left Column -->
+              <div class="col-lg-6">
+
+                  <div class="progress">
+                      <span class="skill"><span>Python</span> <i class="val">95%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>SQL</span> <i class="val">90%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>Power BI</span> <i class="val">85%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>Tableau</span> <i class="val">80%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>Excel</span> <i class="val">90%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>Data Visualization</span> <i class="val">85%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+              </div><!-- End Left Column -->
+
+              <!-- Right Column -->
+              <div class="col-lg-6">
+
+                  <div class="progress">
+                      <span class="skill"><span>Machine Learning</span> <i class="val">75%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>Big Data (Spark, Hadoop)</span> <i class="val">70%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>Cloud Platforms (AWS, Azure)</span> <i class="val">65%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>R Programming</span> <i class="val">60%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>Data Engineering</span> <i class="val">70%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+                  <div class="progress">
+                      <span class="skill"><span>ETL Processes</span> <i class="val">65%</i></span>
+                      <div class="progress-bar-wrap">
+                          <div class="progress-bar" style="background-color: #3498db;" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div><!-- End Skills Item -->
+
+              </div><!-- End Right Column -->
+
+          </div>
+      </div>
+  </div>
+
+</section><!-- /Skills Section -->
+
+
+
+
+<!-- Resume Section -->
+
+
+<section id="resume" class="resume section" style="background-color: #f9f9f9; padding: 60px 0; font-family: 'Roboto', sans-serif;">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="section-title" data-aos="fade-up" style="text-align: center; margin-bottom: 40px;">
+      <h2 style="font-family: 'Roboto Slab', serif; font-weight: bold; font-size: 2rem; color: #2c3e50;">Resume</h2>
+      <p style="font-size: 1.2rem; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+        Dedicated to leveraging data and analytics for business impact, I specialize in building interactive visualizations, 
+        designing efficient data pipelines, and applying machine learning to solve real-world problems.
+      </p>
+    </div>
+
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title" style="font-size: 1.8rem; color: #34495e; font-weight: bold; border-bottom: 2px solid #e74c3c; padding-bottom: 10px;">
+          Summary
+        </h3>
+        <div class="resume-item pb-0" style="margin-top: 20px;">
+          <h4 style="color: #2c3e50;">Mouli Chittabathina</h4>
+          <p style="color: #7f8c8d;">
+            <em>
+              Data Analyst with a proven track record of using Python, SQL, Power BI, and Tableau to unlock actionable insights, 
+              streamline data processes, and support decision-making. Adept at transforming complex datasets into compelling stories.
+            </em>
+          </p>
+          <ul style="color: #7f8c8d; font-size: 0.95rem; line-height: 1.6;">
+            <li>Fairfax, VA</li>
+            <li>+1 571-564-6067</li>
+            <li>moulichittabathina@gmail.com</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title" style="font-size: 1.8rem; color: #34495e; font-weight: bold; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; margin-top: 40px;">
+          Education
+        </h3>
+        <div class="resume-item" style="margin-top: 20px;">
+          <h4 style="color: #2c3e50;">Masters in Data Analytics Engineering</h4>
+          <h5 style="color: #7f8c8d; font-size: 0.95rem;">2023 - 2024</h5>
+          <p style="color: #7f8c8d; font-size: 0.95rem;">
+            <em>George Mason University, Fairfax, VA</em>
+          </p>
+          <p style="color: #7f8c8d; font-size: 0.95rem;">GPA: 4.0/4.0. Specialized in predictive analytics, machine learning, and data visualization.</p>
+        </div>
+        <div class="resume-item" style="margin-top: 20px;">
+          <h4 style="color: #2c3e50;">Bachelor of Electronics and Communication Engineering</h4>
+          <h5 style="color: #7f8c8d; font-size: 0.95rem;">2016 - 2020</h5>
+          <p style="color: #7f8c8d; font-size: 0.95rem;">
+            <em>Malaviya National Institute of Technology, Jaipur, India</em>
+          </p>
+          <p style="color: #7f8c8d; font-size: 0.95rem;">GPA: 7.9/10.0. Focused on data systems, communication protocols, and algorithm design.</p>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title" style="font-size: 1.8rem; color: #34495e; font-weight: bold; border-bottom: 2px solid #e74c3c; padding-bottom: 10px;">
+          Professional Experience
+        </h3>
+        <!-- Data Analyst Intern -->
+        <div class="resume-item" style="margin-top: 20px;">
+          <h4 style="color: #2c3e50;">Data Analyst Intern</h4>
+          <h5 style="color: #7f8c8d; font-size: 0.95rem;">Aug 2024 - Present</h5>
+          <p style="color: #7f8c8d; font-size: 0.95rem;">
+            <em>Indukuri Information Services Inc, Goodlettsville, TN</em>
+          </p>
+          <ul style="font-size: 0.95rem; color: #7f8c8d; line-height: 1.6;">
+            <li>Consolidated data from 5+ sources, ensuring 100% accuracy and increasing business performance by 25%.</li>
+            <li>Streamlined data pipelines using Airflow, improving workflow efficiency by 30% and delivering 15+ financial reports.</li>
+            <li>Implemented experimental design techniques to enhance data analysis precision by 20% for actionable insights.</li>
+          </ul>
+        </div>
+
+        <!-- Data Analyst -->
+        <div class="resume-item" style="margin-top: 20px;">
+          <h4 style="color: #2c3e50;">Data Analyst</h4>
+          <h5 style="color: #7f8c8d; font-size: 0.95rem;">Jan 2024 - May 2024</h5>
+          <p style="color: #7f8c8d; font-size: 0.95rem;">
+            <em>Hildreth Institute, Boston, MA</em>
+          </p>
+          <ul style="font-size: 0.95rem; color: #7f8c8d; line-height: 1.6;">
+            <li>Built Power BI and Tableau dashboards comparing living costs for 100,000+ students, improving financial decision-making.</li>
+            <li>Reviewed 50+ datasets for FAFSA reforms, leading to a 30% improvement in financial transparency.</li>
+            <li>Developed an automated pipeline integrating 5+ APIs via AWS, enabling real-time data analysis across teams.</li>
+          </ul>
+        </div>
+
+        <!-- Senior Software Engineer -->
+        <div class="resume-item" style="margin-top: 20px;">
+          <h4 style="color: #2c3e50;">Senior Software Engineer</h4>
+          <h5 style="color: #7f8c8d; font-size: 0.95rem;">Apr 2021 - Dec 2022</h5>
+          <p style="color: #7f8c8d; font-size: 0.95rem;">
+            <em>DMI Finance Private Limited, New Delhi, India</em>
+          </p>
+          <ul style="font-size: 0.95rem; color: #7f8c8d; line-height: 1.6;">
+            <li>Implemented real-time Power BI dashboards, reducing time to insight by 40% and support tickets by 30%.</li>
+            <li>Enhanced operational efficiency by 40% through Snowflake and DynamoDB implementations.</li>
+            <li>Saved $50K in storage costs via a Talend-based data purging system.</li>
+          </ul>
+        </div>
+
+        <!-- Software Engineer -->
+        <div class="resume-item" style="margin-top: 20px;">
+          <h4 style="color: #2c3e50;">Software Engineer</h4>
+          <h5 style="color: #7f8c8d; font-size: 0.95rem;">Jun 2020 - Mar 2021</h5>
+          <p style="color: #7f8c8d; font-size: 0.95rem;">
+            <em>DMI Finance Private Limited, New Delhi, India</em>
+          </p>
+          <ul style="font-size: 0.95rem; color: #7f8c8d; line-height: 1.6;">
+            <li>Reduced batch monitoring errors by 40% with refined solutions and optimized data retrieval by 25% using SOQL queries.</li>
+            <li>Boosted data integrity by 99.9% using advanced models with Salesforce and AWS.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- /Resume Section -->
+    
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section light-background">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2 style="font-family: 'Roboto Slab', serif; font-weight: bold; font-size: 2rem; color: #2c3e50; text-align: center;">Projects</h2>
+    <p style="font-size: 1.2rem; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto; text-align: center;">Explore a collection of my key projects that showcase my expertise in data analysis, machine learning, automation, and data visualization. These projects highlight my ability to derive actionable insights from complex data, automate processes for efficiency, and present data-driven findings through interactive dashboards.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+      <!-- Portfolio Filters -->
+      <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">All</li>
+        <li data-filter=".filter-analysis">Data Analysis</li>
+        <li data-filter=".filter-automation">Automation & Data Management</li>
+        <li data-filter=".filter-visualization">Data Visualization</li>
+      </ul><!-- End Portfolio Filters -->
+
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Analysis of COVID-19 Disparities -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-analysis">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/Covid_19_1.jpg" class="img-fluid" alt="COVID-19 Disparities Analysis" style="border-radius: 10px; overflow: hidden;">
+            <div class="portfolio-info">
+              <h4 style="font-family: 'Roboto Slab', serif; font-weight: bold; color: #2c3e50;">COVID-19 Disparities Analysis</h4>
+              <p class="description">Analyzing racial, ethnic, and age disparities in COVID-19 data across US counties.</p>
+              <a href="assets/img/portfolio/Covid_19_1.jpg" title="COVID-19 Disparities Analysis" data-gallery="portfolio-gallery-app" class="glightbox preview-link" data-description="Analyzing racial, ethnic, and age disparities in COVID-19 data across US counties.">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+              <a href="portfolio-details.html?project=covid-analysis" title="More Details" class="details-link">
+                <i class="bi bi-link-45deg"></i>
+              </a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Customer Churn Prediction -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-analysis">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/Customer_Churn.jpg" class="img-fluid" alt="Customer Churn Prediction" style="border-radius: 10px; overflow: hidden;">
+            <div class="portfolio-info">
+              <h4 style="font-family: 'Roboto Slab', serif; font-weight: bold; color: #2c3e50;">Customer Churn Prediction</h4>
+              <p class="description">Predicting customer churn using machine learning models and EDA.</p>
+              <a href="assets/img/portfolio/Customer_Churn.jpg" title="Customer Churn Prediction" data-gallery="portfolio-gallery-app" class="glightbox preview-link" data-description="Predicting customer churn using machine learning models and exploratory data analysis.">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+              <a href="portfolio-details.html?project=churn-prediction" title="More Details" class="details-link">
+                <i class="bi bi-link-45deg"></i>
+              </a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Auto Insurance Analysis -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-analysis">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/Insurance.jpg" class="img-fluid" alt="Auto Insurance Analysis" style="border-radius: 10px; overflow: hidden;">
+            <div class="portfolio-info">
+              <h4 style="font-family: 'Roboto Slab', serif; font-weight: bold; color: #2c3e50;">Auto Insurance Analysis</h4>
+              <p class="description">Exploring customer values, state variations, and profitability in insurance data.</p>
+              <a href="assets/img/portfolio/Insurance.jpg" title="Auto Insurance Analysis" data-gallery="portfolio-gallery-app" class="glightbox preview-link" data-description="Exploring customer values, state variations, and profitability in insurance data.">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+              <a href="portfolio-details.html?project=auto-insurance" title="More Details" class="details-link">
+                <i class="bi bi-link-45deg"></i>
+              </a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- IPL Team Performance Analysis -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-visualization">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/cricket_1.jpg" class="img-fluid" alt="IPL Team Performance Analysis" style="border-radius: 10px; overflow: hidden;">
+            <div class="portfolio-info">
+              <h4 style="font-family: 'Roboto Slab', serif; font-weight: bold; color: #2c3e50;">IPL Team Performance Analysis</h4>
+              <p class="description">Analyzing IPL dynamics and debunking myths using R Studio.</p>
+              <a href="assets/img/portfolio/cricket_1.jpg" title="IPL Team Performance Analysis" data-gallery="portfolio-gallery-app" class="glightbox preview-link" data-description="Analyzing IPL dynamics and debunking myths using R Studio.">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+              <a href="portfolio-details.html?project=ipl-analysis" title="More Details" class="details-link">
+                <i class="bi bi-link-45deg"></i>
+              </a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Automated Historical Data Purging -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automation">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/Salesforce_purging.jpg" class="img-fluid" alt="Automated Historical Data Purging" style="border-radius: 10px; overflow: hidden;">
+            <div class="portfolio-info">
+              <h4 style="font-family: 'Roboto Slab', serif; font-weight: bold; color: #2c3e50;">Automated Historical Data Purging</h4>
+              <p class="description">Automation using Talend and SOQL for data storage and optimization in Salesforce.</p>
+              <a href="assets/img/portfolio/Salesforce_purging.jpg" title="Automated Historical Data Purging" data-gallery="portfolio-gallery-app" class="glightbox preview-link" data-description="Automating data storage optimization using Talend and SOQL in Salesforce.">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+              <a href="portfolio-details.html?project=data-purging" title="More Details" class="details-link">
+                <i class="bi bi-link-45deg"></i>
+              </a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Automated Batch Monitoring -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-automation">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/Salesforce_batch_monitoring_1.jpg" class="img-fluid" alt="Automated Batch Monitoring" style="border-radius: 10px; overflow: hidden;">
+            <div class="portfolio-info">
+              <h4 style="font-family: 'Roboto Slab', serif; font-weight: bold; color: #2c3e50;">Automated Batch Monitoring</h4>
+              <p class="description">Batch tracking and error handling in Salesforce using SOQL and Apex.</p>
+              <a href="assets/img/portfolio/Salesforce_batch_monitoring_1.jpg" title="Automated Batch Monitoring" data-gallery="portfolio-gallery-app" class="glightbox preview-link" data-description="Batch tracking and error handling in Salesforce using SOQL and Apex.">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+              <a href="portfolio-details.html?project=batch-monitoring" title="More Details" class="details-link">
+                <i class="bi bi-link-45deg"></i>
+              </a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+        <!-- Interactive Survey Dashboard -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-visualization">
+          <div class="portfolio-content h-100">
+            <img src="assets/img/portfolio/Dashboard.jpg" class="img-fluid" alt="Interactive Survey Dashboard" style="border-radius: 10px; overflow: hidden;">
+            <div class="portfolio-info">
+              <h4 style="font-family: 'Roboto Slab', serif; font-weight: bold; color: #2c3e50;">Interactive Survey Dashboard</h4>
+              <p class="description">Visualizing survey data and results with Tableau and Power BI dashboards.</p>
+              <a href="assets/img/portfolio/Dashboard.jpg" title="Interactive Survey Dashboard" data-gallery="portfolio-gallery-app" class="glightbox preview-link" data-description="Visualizing survey data with interactive Tableau and Power BI dashboards.">
+                <i class="bi bi-zoom-in"></i>
+              </a>
+              <a href="portfolio-details.html?project=survey-dashboard" title="More Details" class="details-link">
+                <i class="bi bi-link-45deg"></i>
+              </a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+
+      </div><!-- End Isotope Container -->
+    </div><!-- End Isotope Layout -->
+  </div><!-- End Container -->
+
+</section><!-- End Portfolio Section -->
+
+
+
+
   
 
+<!-- Contact Section -->
+<section id="contact" class="contact section">
 
-		
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me for collaborations, opportunities, or any inquiries. I'm always open to connecting!</p>
+  </div><!-- End Section Title -->
 
-		<!-- Footer -->
-<footer id="footer" style="background-color: #fff; padding: 10px; border-radius: 10px; margin-top: 20px; box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
-    <div class="inner">
-        <ul class="icons" style="list-style: none; padding: 0; margin: 0; display: inline-block;">
-            <li style="display: inline-block; margin-right: 10px;"><a href="https://twitter.com/MOULICHOWDARY19" class="icon brands fa-twitter" style="color: #1DA1F2;"><span class="label">Twitter</span></a></li>
-            <li style="display: inline-block; margin-right: 10px;"><a href="https://github.com/moulichittabathina" class="icon brands fa-github" style="color: #211F1F;"><span class="label">Github</span></a></li>
-            <li style="display: inline-block; margin-right: 10px;"><a href="https://www.linkedin.com/in/mouli-chittabathina/" class="icon brands fa-linkedin" style="color: #0E76A8;"><span class="label">LinkedIn</span></a></li>
-            <li style="display: inline-block;"><a href="mailto:moulichittabathina@gmail.com" class="icon solid fa-envelope" style="color: #D44638;"><span class="label">Email</span></a></li>
-        </ul>
+  <div class="container" data-aos="fade-up" data-aos-delay="100" style="border-radius: 10px; overflow: hidden;" >
+
+    <div class="row gy-4">
+
+      <div class="col-lg-5">
+        <div class="info-wrap">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>11610 Fairfax Meadows Cir, Fairfax, VA, 22030</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Me</h3>
+              <p>+1 571-564-6067</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Me</h3>
+              <p>moulichittabathina@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.2136069457563!2d-77.3289387846472!3d38.86555617957192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64dc7f3d39433%3A0xeb7f85c169118b5!2s11610%20Fairfax%20Meadows%20Cir%2C%20Fairfax%2C%20VA%2022030%2C%20USA!5e0!3m2!1sen!2sus!4v1690000000000!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="col-lg-7" >
+        <!-- Form -->
+        <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <label for="name-field" class="pb-2">Your Name</label>
+              <input type="text" name="name" id="name-field" class="form-control" required="">
+            </div>
+
+            <div class="col-md-6">
+              <label for="email-field" class="pb-2">Your Email</label>
+              <input type="email" class="form-control" name="email" id="email-field" required="">
+            </div>
+
+            <div class="col-md-12">
+              <label for="subject-field" class="pb-2">Subject</label>
+              <input type="text" class="form-control" name="subject" id="subject-field" required="">
+            </div>
+
+            <div class="col-md-12">
+              <label for="message-field" class="pb-2">Message</label>
+              <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+             
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+      </div><!-- End Contact Form -->
+
     </div>
-</footer>
+
+  </div>
+
+</section><!-- /Contact Section -->
+
+<!-- Add EmailJS Script -->
+<script type="text/javascript">
+  // Initialize EmailJS
+  emailjs.init("8IxGeaOpRTxG71bW-");  // Replace with your EmailJS user ID
+
+  // Get form data and send email
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    var form = event.target;
+
+    emailjs.sendForm("service_na9z1ab", "template_ylku5t7", form)
+      .then(function(response) {
+        console.log("Success", response);
+        document.querySelector(".sent-message").style.display = "block";
+        form.reset();
+      })
+      .catch(function(error) {
+        console.log("Failed", error);
+        document.querySelector(".error-message").style.display = "block";
+      });
+  });
+</script>
 
 
 
+  </main>
 
+  <footer id="footer" class="footer position-relative light-background">
 
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
 
+  </footer>
 
-  
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
-	</body>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
